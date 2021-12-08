@@ -34,7 +34,7 @@ pub fn main() void {
         }
 
         gpio.toggle(5);
-        delay_cycles(50000);
+        delay_cycles(500000);
     }
 }
 

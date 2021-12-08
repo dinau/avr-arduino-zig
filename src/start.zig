@@ -64,7 +64,8 @@ fn clear_bss() void {
     // Probably a good idea to add clobbers here, but compiler doesn't seem to care
 }
 
-pub fn panic(msg: []const u8, error_return_trace: ?*@import("builtin").StackTrace) noreturn {
+
+pub fn panic(msg: []const u8, error_return_trace: ?*@import("std").builtin.StackTrace) noreturn {
     // Currently assumes that the uart is initialized in main().
     uart.write("PANIC: ");
     uart.write(msg);
